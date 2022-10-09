@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Statistics">
+
+    <TextView
+        android:id="@+id/playedGames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/playedGamesLabel"
+        app:layout_constraintStart_toStartOf="@+id/playedGamesLabel"
+        app:layout_constraintTop_toBottomOf="@+id/playedGamesLabel" />
+
+    <TextView
+        android:id="@+id/playedGamesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/playedGames"
+        android:text="@string/played_games_label"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/gameProgressLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/wonGames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/wonGamesLabel"
+        app:layout_constraintStart_toStartOf="@+id/wonGamesLabel"
+        app:layout_constraintTop_toBottomOf="@+id/wonGamesLabel" />
+
+    <ProgressBar
+        android:id="@+id/gameProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/gameProgressLabel"
+        app:layout_constraintStart_toStartOf="@+id/gameProgressLabel"
+        app:layout_constraintTop_toBottomOf="@+id/gameProgressLabel" />
+
+    <TextView
+        android:id="@+id/gameProgressLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/game_ratio_label"
+        app:layout_constraintBottom_toTopOf="@+id/clearDataButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playedGamesLabel" />
+
+    <TextView
+        android:id="@+id/lostGames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/gamesLostLabel"
+        app:layout_constraintStart_toStartOf="@+id/gamesLostLabel"
+        app:layout_constraintTop_toBottomOf="@+id/gamesLostLabel" />
+
+    <TextView
+        android:id="@+id/gamesLostLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lost_games_label"
+        app:layout_constraintBaseline_toBaselineOf="@+id/wonGamesLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/wonGamesLabel" />
+
+    <TextView
+        android:id="@+id/wonGamesLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/won_games_label"
+        app:layout_constraintBottom_toTopOf="@+id/gameProgressLabel"
+        app:layout_constraintEnd_toStartOf="@+id/gamesLostLabel"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playedGames" />
+
+    <Button
+        android:id="@+id/menuButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/menu_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/clearDataButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/clear_data_button"
+        app:layout_constraintBottom_toTopOf="@+id/menuButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
